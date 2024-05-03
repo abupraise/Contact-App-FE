@@ -1,9 +1,9 @@
 /* GLOBAL VARIABLES */
 :root {
-	--selective-blue: hsl(210, 69%, 25%);
-	--selective-blue-2: hsl(210, 69%, 19%);
-	--selective-blue-3: hsl(210, 69%, 35%);
-	--sky-blue: hsl(220, 48%, 90%);
+	--selective-purple: #93478F;
+	--selective-purple-2: #6A3166;
+	--selective-purple-3: #D268CC;
+	--sky-purple: hsl(220, 48%, 90%);
 	--light-gray: hsl(233, 100%, 98%);
 	--light-gray-2: hsl(233, 100%, 88%);
 	--dark-gray: hsl(225, 20%, 48%);
@@ -22,15 +22,15 @@
 	--radical-red: hsl(351, 83%, 61%);
 	--isabelline: hsl(36, 33%, 94%);
 	--gray-x-11: hsl(0, 0%, 73%);
-	--kappel_15: hsla(170, 75%, 41%, 0.15);
+	--kappel_15: hsla(295, 96%, 42%, 0.15);
 	--platinum: hsl(0, 0%, 90%);
 	--gray-web: hsl(0, 0%, 50%);
 	--black_80: hsla(0, 0%, 0%, 0.8);
 	--white_50: hsla(0, 0%, 100%, 0.5);
 	--black_50: hsla(0, 0%, 0%, 0.5);
 	--black_30: hsla(0, 0%, 0%, 0.3);
-	--kappel: hsl(170, 75%, 41%);
-	--kappel: hsl(195, 71%, 31%);
+	--kappel: hsl(287, 99%, 28%);
+	--kappel: hsl(290, 100%, 33%);
 
 	/**
 	 * gradient color
@@ -194,7 +194,6 @@ i {
 .container {
 	width: min(1200px, 100% - 2rem);
 	margin-inline: auto;
-	/* background-color: lightpink; */
 	overflow: hidden;
 }
 
@@ -210,7 +209,7 @@ i {
 
 .btn {
 	color: var(--white);
-	background-color: var(--selective-blue);
+	background-color: var(--selective-purple);
 	font-size: .8rem;
 	padding: 3px 10px;
 	white-space: normal;
@@ -224,7 +223,7 @@ i {
 }
 
 .btn:hover {
-	background-color: var(--selective-blue-3);
+	background-color: var(--selective-purple-3);
 }
 
 .btn-danger:hover {
@@ -254,12 +253,11 @@ i {
 
 .contact__item {
 	width: 100%;
-	background-color: #ecf1f1;
+	background-color: #f1ecf0;
 	padding: .88rem;
 	border-radius: var(--radius-5);
 	cursor: pointer;
 	min-height: max-content;
-	/* max-width: 280px; */
 }
 
 .contact__header {
@@ -277,7 +275,7 @@ i {
 
 .contact__image img {
 	width: 100%;
-	border: 3px solid var(--selective-blue);
+	border: 3px solid var(--selective-purple);
 	aspect-ratio: 1 / 1;
 	object-fit: cover;
 	object-position: center;
@@ -301,23 +299,8 @@ i {
 	padding: 2px;
 }
 
-/* Landing Page Styling */
 .contact__body {
 	margin-top: 1rem;
-}
-
-.layout-1220 .page-main{
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.page-main {
-    max-width: 100%;
-    padding: 10px 20px;
-}
-.page-main > .page-title {
-    color: #01484C;
-    font-size: 20px;
-    margin: 0 0 15px;
 }
 
 .contact__body>p {
@@ -368,13 +351,13 @@ i {
 }
 
 .pagination a.active {
-	background-color: var(--selective-blue);
+	background-color: var(--selective-purple);
 	color: white;
-	border: 1px solid var(--selective-blue);
+	border: 1px solid var(--selective-purple);
 }
 
 .pagination a:hover:not(.active) {
-	background-color: #ecf1f1;
+	background-color: #f1ecf0;
 }
 
 /* PROFILE */
@@ -382,7 +365,6 @@ i {
 .profile {
 	display: grid;
 	grid-template-columns: 360px 1fr;
-	/* grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr)); */
 	align-items: start;
 	gap: 1rem;
 	margin-top: 2rem;
@@ -395,7 +377,7 @@ i {
 	align-items: center;
 	flex-wrap: wrap;
 	gap: 1rem;
-	background-color: #ecf1f1;
+	background-color: #f1ecf0;
 	padding: 10px;
 	border-radius: var(--radius-5);
 }
@@ -403,7 +385,7 @@ i {
 .profile__details img {
 	width: 120px;
 	border-radius: var(--radius-5);
-	border: 3px solid var(--selective-blue);
+	border: 3px solid var(--selective-purple);
 	aspect-ratio: 1 / 1;
 	object-fit: cover;
 	object-position: center;
@@ -423,13 +405,12 @@ i {
 }
 
 .profile__settings {
-	background-color: #ecf1f1;
+	background-color: #f1ecf0;
 	padding: 10px;
 	border-radius: var(--radius-5);
 }
 
 .divider {
-	/* margin-top: 1rem; */
 	height: 2px;
 	background: hsla(210, 10%, 23%, 0.07);
 }
@@ -477,11 +458,8 @@ i {
 }
 
 .modal__body {
-	/* overflow: hidden; */
 	overflow-y: hidden;
-	/* Hide vertical scrollbar */
 	overflow-x: hidden;
-	/* Hide horizontal scrollbar */
 }
 
 .modal__footer {
@@ -542,7 +520,6 @@ dialog[open] {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	margin: 20px 0 12px 0;
-	/* min-height: 600px; */
 }
 
 .input-box {
@@ -573,7 +550,7 @@ dialog[open] {
 
 input[type=file]::file-selector-button {
 	color: var(--white);
-	background-color: var(--selective-blue);
+	background-color: var(--selective-purple);
 	font-size: .8rem;
 	padding: 7px 15px;
 	white-space: normal;
@@ -584,7 +561,7 @@ input[type=file]::file-selector-button {
 }
 
 input[type=file]::file-selector-button:hover {
-	background-color: var(--selective-blue-3);
+	background-color: var(--selective-purple-3);
 }
 
 .form_footer {

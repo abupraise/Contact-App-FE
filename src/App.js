@@ -3,15 +3,17 @@ import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/Header'
 import ContactList from './components/ContactList'
 import { getContacts, saveContact, udpatePhoto } from './api/ContactService';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import ContactDetail from './components/ContactDetail';
 import { toastError } from './api/ToastService';
 import { ToastContainer } from 'react-toastify';
-import LandingPage from './page/LandingPage';
+import Login from './components/LoginComponent/Login';
+import Signup from './components/LoginComponent/SignUp';
 
 function App() {
   const modalRef = useRef();
   const fileRef = useRef();
+  const location = useLocation();
   const [data, setData] = useState({});
   const [currentPage, setCurrentPage] = useState(0);
   const [file, setFile] = useState(undefined);
@@ -23,6 +25,9 @@ function App() {
     title: '',
     status: '',
   });
+
+  const noHeaderRoutes = ['/login', '/signup', '/home'];
+  const shouldShowHeader = !noHeaderRoutes.includes(location.pathname);
 
   const getAllContacts = async (page = 0, size = 10) => {
     try {
@@ -93,12 +98,17 @@ function App() {
 
   return (
     <>
-      <Header toggleModal={toggleModal} nbOfContacts={data.totalElements} />
+    <Routes>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/signup' element={<Signup/>}/>
+      <Route path='/home' element={<Signup/>}/>
+    </Routes>
+    
+    {shouldShowHeader && <Header toggleModal={toggleModal} nbOfContacts={data.totalElements} />}
       <main className='main'>
         <div className='container'>
           <Routes>
-            {/* <Route path='/' element={<Navigate to={'/contacts'} />} /> */}
-            <Route path='/' element={<LandingPage />}/>
+            <Route path='/' element={<Navigate to={'/home'} />} />
             <Route path="/contacts" element={<ContactList data={data} currentPage={currentPage} getAllContacts={getAllContacts} />} />
             <Route path="/contacts/:id" element={<ContactDetail updateContact={updateContact} updateImage={updateImage} />} />
           </Routes>
