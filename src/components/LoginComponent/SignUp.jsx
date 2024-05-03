@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from 'axios';
+import axios from "axios";
 import Image from "../../assets/9148063_4077407-removebg.png";
 import Logo from "../../assets/logo.png";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -32,18 +32,23 @@ const Signup = () => {
     setPasswordError("");
 
     try {
-      const response = await axios.post('http://localhost:8080/api/v1/auth/register', {
-        firstName: formData.firstName,
-        lastName: formData.lastName,
-        email: formData.email,
-        password: formData.password
-      });
+      const response = await axios.post(
+        "http://localhost:8080/api/v1/auth/register",
+        {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          password: formData.password,
+        }
+      );
       console.log("Registration Success:", response.data);
 
-      window.location.href = '/login';
-
+      window.location.href = "/login";
     } catch (error) {
-      console.error("Registration Error:", error.response ? error.response.data : error.message);
+      console.error(
+        "Registration Error:",
+        error.response ? error.response.data : error.message
+      );
     }
   };
 

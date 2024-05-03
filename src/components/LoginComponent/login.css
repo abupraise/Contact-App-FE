@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
- *{
+* {
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
@@ -17,11 +17,11 @@ body{
 
 } */
 
-.login-main{
+.login-main {
   display: flex;
 }
 
-.login-left{
+.login-left {
   flex-grow: 1;
   height: 100vh;
   background-color: #E9E9E9;
@@ -31,11 +31,11 @@ body{
   align-items: center;
 }
 
-.login-left img{
+.login-left img {
   width: 400px;
 }
 
-.login-right{
+.login-right {
 
   height: 100vh;
 
@@ -44,7 +44,7 @@ body{
 
 }
 
-.login-right-container{
+.login-right-container {
   height: 100%;
   width: 80%;
   margin: 0 auto;
@@ -55,33 +55,33 @@ body{
 
 }
 
-.login-right form{
+.login-right form {
   display: flex;
   flex-direction: column;
-} 
+}
 
-.login-logo{
+.login-logo {
   align-self: center;
   padding-top: 50px;
 }
 
-.login-center{
+.login-center {
   margin: auto 0;
 }
 
-.login-logo img{
+.login-logo img {
   width: 50px;
 }
 
-.login-center h2{
+.login-center h2 {
   font-size: 3.5rem;
 }
 
-.login-center{
+.login-center {
   text-align: center;
 }
 
-.login-center p{
+.login-center p {
   font-weight: 400;
   font-size: 2rem;
   margin-bottom: 40px;
@@ -89,8 +89,7 @@ body{
 
 form input[type='email'],
 form input[type='password'],
-form input[type='text']
- {
+form input[type='text'] {
   width: 100%;
   padding: 16px;
   margin-bottom: 16px;
@@ -98,13 +97,13 @@ form input[type='text']
   border-bottom: 1px solid #803B7A;
   outline: none;
   box-sizing: border-box;
-} 
+}
 
-.pass-input-div{
+.pass-input-div {
   position: relative;
 }
 
-.pass-input-div svg{
+.pass-input-div svg {
   font-size: 20px;
   position: absolute;
   right: 10px;
@@ -113,7 +112,7 @@ form input[type='text']
   outline: none;
 }
 
- .form-button {
+.form-button {
   width: 100%;
   padding: 16px;
   border: none;
@@ -122,55 +121,55 @@ form input[type='text']
   cursor: pointer;
   border-radius: 30px;
   font-weight: 600;
-} 
+}
 
 
-.login-center-options{
+.login-center-options {
   display: flex;
   justify-content: space-between;
 }
 
-.remember-div{
-  display:flex;
+.remember-div {
+  display: flex;
   align-items: center;
   column-gap: 5px;
 }
 
-.remember-div label{
+.remember-div label {
   font-size: 1.3rem;
   font-weight: 500;
   cursor: pointer;
   margin-top: 2px;
 }
 
-.forgot-pass-link{
+.forgot-pass-link {
   text-decoration: none;
   font-size: 1.3rem;
 }
 
-.forgot-pass-link:hover{
+.forgot-pass-link:hover {
   text-decoration: underline;
 }
 
-.login-center-buttons{
+.login-center-buttons {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
   row-gap: 10px;
 }
 
-.login-center-buttons button:nth-child(1){
+.login-center-buttons button:nth-child(1) {
   background-color: #803B7A;
   color: white;
   border: 3px solid #803B7A;
 }
 
-.login-center-buttons button:nth-child(1):hover{
+.login-center-buttons button:nth-child(1):hover {
   color: #333;
   background-color: white;
 }
 
-.login-center-buttons button:nth-child(2){
+.login-center-buttons button:nth-child(2) {
   background-color: #F0F0F0;
   display: flex;
   justify-content: center;
@@ -178,26 +177,25 @@ form input[type='text']
   column-gap: 10px;
 }
 
-.login-center-buttons button:nth-child(2) img{
+.login-center-buttons button:nth-child(2) img {
   width: 30px;
 }
 
-.login-center-buttons button:nth-child(2):hover{
+.login-center-buttons button:nth-child(2):hover {
   background-color: #c4c4c457;
 }
 
-.login-bottom-p{
+.login-bottom-p {
   text-align: center;
   font-size: 1.5rem;
   padding-bottom: 40px;
 }
 
-.login-bottom-p a{
+.login-bottom-p a {
   text-decoration: none;
   font-weight: 600;
 }
 
-.login-bottom-p a:hover{
+.login-bottom-p a:hover {
   text-decoration: underline;
 }
-
