@@ -1,70 +1,50 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hux Ventures Contact Manager - Frontend
 
-## Available Scripts
+## Overview
+This is the frontend for the Hux Ventures Contact Manager. It is built using React and designed to interact with the RESTful API backend to manage contact information.
 
-In the project directory, you can run:
+## Features
+- User Authentication (Signup and Login)
+- Create, Update, and Delete Contacts
+- View a list of all saved contacts
+- Detailed view of each contact
 
-### `npm start`
+## Prerequisites
+Before you begin, ensure you have the following installed:
+- Node.js (recommended version 21.7.1)
+- npm (10.7.0)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To get started with the project, follow these steps:
 
-### `npm test`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/abupraise/hux-assessment-frontend.
+   cd hux-assessment-frontend
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### `npm run build`
+3. Start the development server:
+   ```bash
+   npm run start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   This will launch the app in development mode. Open [http://localhost:3000] to view it in your browser.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Built With
+- [React](https://reactjs.org/) - The web framework used
+- [Axios](https://github.com/axios/axios) - For making API requests
+- [Web Vitals](https://web.dev/vitals/) - For measuring website performance
+- [Create React App](https://create-react-app.dev/) - Used to bootstrap the development environment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
+After logging in, users can create new contacts through the 'Create Contact' page. All contacts can be viewed in the 'Contacts List' page where each contact can also be edited or deleted. Each contact detail can be viewed by selecting a contact in the list.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author
+- **Praise Abu**
