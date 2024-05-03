@@ -1,6 +1,9 @@
 
 # Hux Ventures Contact Manager - Frontend
 
+![Hux Ventures Contact Manager](public/loginpage.png)
+
+
 ## Overview
 This is the frontend for the Hux Ventures Contact Manager. It is built using React and designed to interact with the RESTful API backend to manage contact information.
 
