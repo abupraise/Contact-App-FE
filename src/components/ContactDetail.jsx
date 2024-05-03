@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { getContact } from '../api/ContactService';
+import { Link, useParams, useNavigate } from 'react-router-dom';
+import { getContact, deleteContact } from '../api/ContactService';
 import { toastError, toastSuccess } from '../api/ToastService';
 
 const ContactDetail = ({ updateContact, updateImage }) => {
+    const navigate = useNavigate();
     const inputRef = useRef();
     const [contact, setContact] = useState({
         id: '',
@@ -23,7 +24,6 @@ const ContactDetail = ({ updateContact, updateImage }) => {
             const { data } = await getContact(id);
             setContact(data);
             console.log(data);
-            //toastSuccess('Contact retrieved');
         } catch (error) {
             console.log(error);
             toastError(error.message);
@@ -57,6 +57,17 @@ const ContactDetail = ({ updateContact, updateImage }) => {
         await updateContact(contact);        
         fetchContact(id);
         toastSuccess('Contact Updated');
+    };
+
+    const onDeleteContact = async () => {
+        try {
+            await deleteContact(id);
+            toastSuccess('Contact Deleted');
+            navigate('/contacts');
+        } catch (error) {
+            console.log(error);
+            toastError(error.message);
+        }
     };
 
     useEffect(() => {
@@ -107,6 +118,7 @@ const ContactDetail = ({ updateContact, updateImage }) => {
                             </div>
                             <div className="form_footer">
                                 <button type="submit" className="btn">Save</button>
+                                <button onClick={onDeleteContact} className="btn btn-danger">Delete</button>
                             </div>
                         </form>
                     </div>
