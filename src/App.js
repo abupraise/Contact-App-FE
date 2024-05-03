@@ -9,6 +9,7 @@ import { toastError } from './api/ToastService';
 import { ToastContainer } from 'react-toastify';
 import Login from './components/LoginComponent/Login';
 import Signup from './components/LoginComponent/SignUp';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 function App() {
   const modalRef = useRef();
@@ -26,7 +27,7 @@ function App() {
     status: '',
   });
 
-  const noHeaderRoutes = ['/login', '/signup', '/home'];
+  const noHeaderRoutes = ['/login', '/signup'];
   const shouldShowHeader = !noHeaderRoutes.includes(location.pathname);
 
   const getAllContacts = async (page = 0, size = 10) => {
@@ -98,17 +99,17 @@ function App() {
 
   return (
     <>
+    <GoogleOAuthProvider clientId="808873082257-ddvcnshbojqe07us90o54g8dak3c97q7.apps.googleusercontent.com">
     <Routes>
       <Route path='/login' element={<Login/>}/>
       <Route path='/signup' element={<Signup/>}/>
-      <Route path='/home' element={<Signup/>}/>
     </Routes>
     
     {shouldShowHeader && <Header toggleModal={toggleModal} nbOfContacts={data.totalElements} />}
       <main className='main'>
         <div className='container'>
           <Routes>
-            <Route path='/' element={<Navigate to={'/home'} />} />
+            <Route path='/' element={<Navigate to={'/login'} />} />
             <Route path="/contacts" element={<ContactList data={data} currentPage={currentPage} getAllContacts={getAllContacts} />} />
             <Route path="/contacts/:id" element={<ContactDetail updateContact={updateContact} updateImage={updateImage} />} />
           </Routes>
@@ -162,6 +163,7 @@ function App() {
         </div>
       </dialog>
       <ToastContainer />
+      </GoogleOAuthProvider>
     </>
   );
 }

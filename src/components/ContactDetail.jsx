@@ -82,7 +82,7 @@ const ContactDetail = ({ updateContact, updateImage }) => {
                     <img src={contact.photoUrl} alt={`Profile photo of ${contact.name}`} />
                     <div className='profile__metadata'>
                         <p className='profile__name'>{contact.name}</p>
-                        <p className='profile__muted'>JPG, GIF, or PNG. Max size of 10MG</p>
+                        <p className='profile__muted'>JPG, GIF, or PNG. Max size of 10MB</p>
                         <button onClick={selectImage} className='btn'><i className='bi bi-cloud-upload'></i> Change Photo</button>
                     </div>
                 </div>
