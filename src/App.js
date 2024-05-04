@@ -114,7 +114,7 @@ function App() {
         <main className="main">
           <div className="container">
             <Routes>
-              <Route path="/" element={<Navigate to={"/login"} />} />
+              <Route path="/" element={<Navigate to={"/home"} />} />
               <Route
                 path="/contacts"
                 element={

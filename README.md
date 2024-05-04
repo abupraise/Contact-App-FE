@@ -1,7 +1,7 @@
 
 # Hux Ventures Contact Manager - Frontend
 
-![Hux Ventures Contact Manager](public/loginpage.png)
+![Hux Ventures Contact Manager](public/screencapture-localhost-3000-home-2024-05-04-10_27_22)
 
 
 ## Overview
