@@ -45,6 +45,8 @@ To get started with the project, follow these steps:
 - [Axios](https://github.com/axios/axios) - For making API requests
 - [Web Vitals](https://web.dev/vitals/) - For measuring website performance
 - [Create React App](https://create-react-app.dev/) - Used to bootstrap the development environment
+- [React Toastify](https://www.npmjs.com/package/react-toastify) - For adding notifications
+
 
 ## Usage
 After logging in, users can create new contacts through the 'Create Contact' page. All contacts can be viewed in the 'Contacts List' page where each contact can also be edited or deleted. Each contact detail can be viewed by selecting a contact in the list.
