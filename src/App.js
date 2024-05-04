@@ -10,6 +10,7 @@ import { ToastContainer } from "react-toastify";
 import Login from "./components/LoginComponent/Login";
 import Signup from "./components/LoginComponent/SignUp";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import HomePage from "./components/HomePage";
 
 function App() {
   const modalRef = useRef();
@@ -27,7 +28,7 @@ function App() {
     status: "",
   });
 
-  const noHeaderRoutes = ["/login", "/signup"];
+  const noHeaderRoutes = ["/login", "/signup", "/home"];
   const shouldShowHeader = !noHeaderRoutes.includes(location.pathname);
 
   const getAllContacts = async (page = 0, size = 10) => {
@@ -104,6 +105,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/home" element={<HomePage />} />
         </Routes>
 
         {shouldShowHeader && (
